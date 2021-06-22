@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Paymentdto } from '../paymentdto';
+import { Banktransaction } from '../banktransaction';
 import { PaymentserviceService } from '../paymentservice.service';
 
 @Component({
@@ -8,11 +8,10 @@ import { PaymentserviceService } from '../paymentservice.service';
   styleUrls: ['./viewbycustid.component.css']
 })
 export class ViewbycustidComponent implements OnInit {
-  payment:Paymentdto = new Paymentdto();
+  payment:Banktransaction[] = undefined;
   msg:string;
   msgflag:boolean;
   custid:number;
-  // transactionid:number;
   constructor(public service:PaymentserviceService) { }
 
   ngOnInit() {

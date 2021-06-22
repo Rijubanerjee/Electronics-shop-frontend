@@ -1,7 +1,9 @@
+import { Customer } from "./customer";
+
 export class Orderproducts {
     orderId:number;
     orderDate:string;
-    customer:number;
+    customer:Customer = undefined;
     totalCost:number;
     orderStatus:string;
 }
